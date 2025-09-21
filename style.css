@@ -5979,7 +5979,6 @@ html::-webkit-scrollbar-thumb {
   margin: 30px 0 0;
   -webkit-box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.16);
-  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5999,6 +5998,29 @@ html::-webkit-scrollbar-thumb {
   .three-boxes__item {
     height: auto;
   }
+}
+.three-boxes__item--inactive {
+  background-color: #919191;
+}
+.three-boxes__item--inactive::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  -webkit-transform: translateX(50%) translateY(50%);
+          transform: translateX(50%) translateY(50%);
+  background: url("./images/lock.svg") center/contain no-repeat;
+  height: 64px;
+  width: 64px;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  z-index: 2;
+}
+.three-boxes__item--inactive h1, .three-boxes__item--inactive h2, .three-boxes__item--inactive h3, .three-boxes__item--inactive h4, .three-boxes__item--inactive h5, .three-boxes__item--inactive p, .three-boxes__item--inactive .button, .three-boxes__item--inactive .woocommerce-checkout .woocommerce #ship-to-different-address label::after, .woocommerce-checkout .woocommerce #ship-to-different-address .three-boxes__item--inactive label::after, .three-boxes__item--inactive .cta .mailchimp-newsletter__form input[type=submit], .cta .mailchimp-newsletter__form .three-boxes__item--inactive input[type=submit], .three-boxes__item--inactive img {
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+  opacity: 0.6;
+  pointer-events: none;
 }
 .three-boxes__icon {
   position: relative;
@@ -7411,16 +7433,11 @@ body.admin-bar .header--fixed {
   position: relative;
   z-index: 2;
 }
-@media (max-width: 767px) {
-  .theme-blog {
-    margin: -30px 0 0;
-  }
-}
 .theme-blog--background {
   background: #facc2b;
 }
 .theme-blog--subpage {
-  margin: 80px 0;
+  margin: 40px 0 90px;
 }
 .theme-blog__wrapper {
   width: 100%;
@@ -7457,6 +7474,9 @@ body.admin-bar .header--fixed {
             flex-direction: column-reverse;
   }
 }
+.theme-blog__column {
+  margin: 30px 0 0;
+}
 @media (max-width: 991px) {
   .theme-blog__column:nth-child(3) {
     display: none;
@@ -7465,11 +7485,15 @@ body.admin-bar .header--fixed {
 .theme-blog__item {
   width: 100%;
   height: 100%;
+  padding: 20px;
+  border: 3px solid #e0e0e0;
+  position: relative;
 }
 @media (max-width: 767px) {
   .theme-blog__item {
     margin: 40px auto 0;
     height: auto;
+    padding: 15px;
   }
 }
 .theme-blog__item--video p {
@@ -7551,8 +7575,9 @@ body.admin-bar .header--fixed {
   }
 }
 .theme-blog__title {
-  margin: 20px 0 0;
+  margin: 0 0 -10px;
   max-width: 410px;
+  display: block;
 }
 .theme-blog__title:hover {
   color: #303030;
@@ -7673,6 +7698,53 @@ body.admin-bar .header--fixed {
 .main--rules-page .default-block.container li > a:hover, .main--rules-page .single-product .default-block#primary li > a:hover, .single-product .main--rules-page .default-block#primary li > a:hover, .main--rules-page .woocommerce-shop .default-block#main li > a:hover, .woocommerce-shop .main--rules-page .default-block#main li > a:hover, .main--rules-page .tax-product_cat .default-block#main li > a:hover, .tax-product_cat .main--rules-page .default-block#main li > a:hover {
   text-decoration: underline;
   color: #303030;
+}
+
+.panelpv-my-account {
+  width: 100%;
+}
+.panelpv-my-account__title {
+  margin: 0 0 25px;
+}
+.panelpv-my-account__link {
+  display: block;
+  margin: 10px 0 0;
+  max-width: 153px;
+  font-size: 14px;
+}
+.panelpv-my-account {
+  /* logged in */
+}
+.panelpv-my-account__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.panelpv-my-account__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 20px 0 0;
+  gap: 15px;
+}
+.panelpv-my-account__logout {
+  background: #303030 !important;
+  border: 1px solid #303030 !important;
 }
 
 .theme-content-product-price, .woocommerce-order-received .woocommerce-order-overview.woocommerce-thankyou-order-details.order_details li strong .woocommerce-Price-amount.amount, .product .price, .woocommerce-cart form.woocommerce-cart-form .woocommerce-cart-form__cart-item.cart_item .product-remove a:hover, .woocommerce-cart form.woocommerce-cart-form .woocommerce-cart-form__cart-item.cart_item .product-remove a, .woocommerce-cart form.woocommerce-cart-form .woocommerce-cart-form__cart-item.cart_item .product-details .product-price ins .woocommerce-Price-amount.amount, .woocommerce-cart form.woocommerce-cart-form .woocommerce-cart-form__cart-item.cart_item .product-details .product-price > .woocommerce-Price-amount.amount {

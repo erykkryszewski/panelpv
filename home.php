@@ -28,19 +28,19 @@ $global_logo = get_field('global_logo', 'options');
     <div class="subpage-hero__background subpage-hero__background--plain"></div>
     <div class="container">
       <div class="subpage-hero__wrapper">
-        <h1 class="subpage-hero__title"><?php echo apply_filters('the_title', 'Blog');?></h1>
+        <h1 class="subpage-hero__title"><?php echo apply_filters('the_title', 'Materiały dla członków');?></h1>
       </div>
     </div>
   </div>
   <div class="spacer" style="height: 90px"></div>
-  <div class="section-title">
+<div class="section-title " id="section-">
     <div class="container">
-      <div class="section-title__wrapper section-title__wrapper--decorated">
-        <h2>Lorem ipsum</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repellendus nemo vero inventore ipsam est distinctio ullam perspiciatis veniam facilis?</p>
-      </div>
-    </div>
+    <div class="section-title__wrapper section-title__wrapper--centered">
+            <h2 class="section-title__title section-title__title--centered">Dziękujemy, że jesteś z nami!</h2>
+                        <p>Cieszymy się, że dołączyłeś do grona naszych członków — dzięki temu masz dostęp do wyjątkowych materiałów i treści przygotowanych specjalnie dla Ciebie. Poniżej znajdziesz wszystko, co pomoże Ci w pełni korzystać z przywilejów i czerpać korzyści z członkostwa.</p>
+          </div>
   </div>
+</div>
   <!-- max 12 items -->
   <?php if(have_posts()):?>
     <div class="theme-blog theme-blog--subpage">
@@ -51,10 +51,13 @@ $global_logo = get_field('global_logo', 'options');
               <?php the_post(); ?>
               <div class="col-12 col-md-6 col-lg-4 theme-blog__column">
                 <div class="theme-blog__item">
+                  <a href="<?php the_permalink(); ?>" class="cover"></a>
+                  <?php if(!empty(get_post_thumbnail_id())):?>
                   <div class="theme-blog__image">
                     <a href="<?php the_permalink();?>" class="cover"></a>
                     <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'full', '', ["class" => "object-fit-cover"]); ?>
                   </div>
+                  <?php endif;?>
                   <div class="theme-blog__content">
                     <div>
                       <a href="<?php the_permalink(); ?>" class="theme-blog__title"><?php the_title(); ?></a>
@@ -99,17 +102,5 @@ $global_logo = get_field('global_logo', 'options');
       </div>
     </div>
   <?php endif;?>
-  <div class="spacer spacer--small" style="height: 40px"></div>
-  <div class="cta">
-    <div class="container">
-      <div class="cta__wrapper">
-        <h2 class="cta__title">Zapoznaj się z naszą ofertą!</h2>
-        <p></p>
-        <div>
-          <a href="/kontakt/" class="cta__button button">Skontaktuj się</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </main>
 <?php get_footer(); ?>

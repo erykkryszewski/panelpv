@@ -12,6 +12,7 @@ require_once PAGE_THEME_DIR . 'lib/classes/svg-support.php';
 // require_once(PAGE_THEME_DIR . 'lib/functions/required-plugins.php');
 require_once PAGE_THEME_DIR . 'lib/functions/search.php';
 require_once PAGE_THEME_DIR . 'lib/functions/image-object-fit.php';
+require_once PAGE_THEME_DIR . 'lib/functions/roles.php';
 
 // if woocommerce is activated
 if (function_exists('WC')) {

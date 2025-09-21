@@ -57,9 +57,14 @@ $body_classes = get_body_class();
               class="top-bar__email"><?php echo esc_html($global_email); ?></a>
           </div>
 
-          <div class="top-bar__content top-bar__content--right">
-            <a href="#" class="top-bar__panel">Panel członków</a>
-          </div>
+<div class="top-bar__content top-bar__content--right">
+    <?php if (is_user_logged_in()) { ?>
+        <a href="<?php echo esc_url(wp_logout_url(home_url('/'))); ?>" class="top-bar__panel">Wyloguj</a>
+    <?php } else { ?>
+        <a href="/moje-konto/" class="top-bar__panel">Logowanie</a>
+    <?php } ?>
+</div>
+
 
         </div>
       </div>
