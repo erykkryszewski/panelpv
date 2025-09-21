@@ -1,0 +1,275 @@
+.counter {
+  width: 100%;
+  background: $theme-color;
+  overflow: hidden;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  @media(max-width: 1199px) {
+    text-align: center;
+  }
+
+  &__row {
+    align-items: center;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+
+    p {
+      @extend .h3;
+      margin: 0;
+      color: $white;
+      max-width: 430px;
+
+      span {
+        @extend .h4;
+        display: block;
+        margin: 0;
+        color: $white;.counter {
+          width: 100%;
+          background: $theme-color;
+          overflow: hidden;
+          position: relative;
+        
+          @media(max-width: 1199px) {
+            text-align: center;
+          }
+        
+          &__wrapper {
+            width: 100%;
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            align-items: center;
+        
+            @media(max-width: 1199px) {
+              justify-content: center;
+            }
+          }
+        
+          &__content {
+            position: relative;
+            padding: 10px 0;
+            text-align: left;
+        
+            p {
+              @extend .h4;
+              margin: 0;
+              color: $white;
+              max-width: 430px;
+              text-align: left;
+              font-weight: 500;
+        
+              @media(max-width: 767px) {
+                font-size: 14px;
+              }
+        
+              span {
+                @extend .h4;
+                display: block;
+                margin: 0;
+                color: $white;
+                font-weight: 400;
+                margin: 10px 0 0;
+              }
+            }
+          }
+        
+          &__time-wrapper {
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+        
+            @media(max-width: 1199px) {
+              justify-content: center;
+            }
+        
+            @media(max-width: 575px) {
+              gap: 15px;
+            }
+          }
+        
+          &__item {
+            @extend .h3;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            max-width: 43px;
+            color: $white;
+            padding: 10px;
+            min-width: 43px;
+        
+            @media(max-width: 767px) {
+              min-width: 70px;
+            }
+            
+            @media(max-width: 575px) {
+              min-width: initial;
+              padding: 0 10px;
+            }
+        
+            &::after {
+              display: block;
+              margin: 0 0;
+              @extend .h4;
+              text-align: center;
+              color: $white;
+              font-weight: 400;
+            }
+          }
+        
+          &__day {
+            &::after {
+              content: 'dni';
+            }
+          }
+        
+          &__hour {
+            &::after {
+              content: 'godzin';
+            }
+          }
+        
+          &__minute {
+            &::after {
+              content: 'min';
+            }
+          }
+        
+          &__second {
+            &::after {
+              content: 'sekund';
+            }
+          }
+        }
+        font-weight: 400;
+        margin: 10px 0 0;
+      }
+    }
+  }
+
+  &__button {
+    border: 1px solid $white;
+    margin: 30px 0 0;
+
+    @media(max-width: 399px) {
+      width: 100%;
+    }
+
+    &:first-child {
+      border: 1px solid $white;
+      color: $theme-color;
+      background: $white;
+    }
+
+    &:hover {
+      border: 1px solid $white;
+      color: $theme-color;
+      background: $white;
+    }
+  }
+
+  &__time-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+
+    @media(max-width: 1199px) {
+      padding: 0 0 40px;
+      justify-content: center;
+    }
+
+    @media(max-width: 575px) {
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    @extend .h1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 130px;
+    color: $white;
+    padding: 25px;
+    min-width: 130px;
+
+    @media(max-width: 767px) {
+      min-width: 100px;
+    }
+    
+    @media(max-width: 575px) {
+      min-width: initial;
+      padding: 0 10px;
+    }
+  
+    &::before {
+      position: absolute;
+      right: 50%;
+      bottom: 50%;
+      transform: translateX(50%) translateY(50%);
+      background: rgba($white, 0.2);
+      display: block;
+      content: '';
+      width: 100%;
+      height: 100%;
+      transition: all 300ms ease-in-out;
+      
+      @media(max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &::after {
+      display: block;
+      margin: 20px 0 0;
+      @extend .h4;
+      text-align: center;
+      color: $white;
+      font-weight: 400;
+    }
+  }
+
+  &__day {
+    &::after {
+      content: 'dni';
+    }
+  }
+
+  &__hour {
+    &::after {
+      content: 'godzin';
+    }
+  }
+
+  &__minute {
+    &::after {
+      content: 'min';
+    }
+  }
+
+  &__second {
+    &::after {
+      content: 'sekund';
+    }
+  }
+}

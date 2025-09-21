@@ -1,0 +1,133 @@
+.woocommerce-order-received {
+  .woocommerce {
+    width: 100%;
+    max-width: 1100px;
+    margin: 55px auto 0;
+  }
+
+  .woocommerce-thankyou-order-received, h2 {
+    @extend .h3;
+    margin: 25px 0 0;
+  }
+
+  .woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
+    margin: 20px 0 0;
+    padding: 0;
+
+    li {
+      @extend .paragraph;
+      margin: 5px 0 0;
+      list-style-type: none;
+
+      strong {
+        @extend .paragraph;
+        font-weight: $regular !important;
+
+        .woocommerce-Price-amount.amount {
+          position: static;
+          @extend .theme-content-product-price;
+        }
+      }
+    }
+  }
+
+  table {
+    text-align: left;
+    width: 100%;
+    text-align: left;
+    border: 1px solid $border-color;
+    margin: 25px 0 0;
+
+    thead {
+      tr {
+
+        th {
+          padding: 10px 0 10px 5px;
+          border-bottom: 1px solid $border-color;
+          @extend .h4;
+          width: auto;
+        }
+
+        td {
+          @extend .paragraph;
+          margin: 0;
+        }
+      }
+    }
+    
+    tbody {
+      tr {
+        td {
+          padding: 10px 0 10px 5px;
+          border-bottom: 1px solid $border-color;
+          @extend .paragraph;
+          margin: 0;
+
+          strong {
+            font-weight: 400;
+          }
+        }
+
+        th {
+          @extend .h4;
+          width: auto;
+        }
+      }
+    }
+    
+    tfoot {
+      tr {
+        th, td {
+          padding: 10px 0 10px 5px;
+          border-bottom: 1px solid $border-color;
+          width: 50%;
+        }
+
+        th {
+          @extend .h4;
+          width: auto;
+        }
+
+        td {
+          @extend .paragraph;
+          margin: 0;
+        }
+
+        &:last-child, &.order-total {
+          th, td {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  .woocommerce-customer-details {
+    margin: 25px 0 0;
+
+    address, p, li {
+      font-size: rem-calc(14.5);
+      font-style: normal;
+      line-height: 1.4;
+    }
+
+    address {
+      margin: 10px 0 0;
+    }
+  }
+
+  .woocommerce-column--shipping-address {
+    display: none;
+  }
+
+  .download-file {
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@mixin bp-up($breakpoint, $use-rem: true) {
+	$breakpoint-value: bp($breakpoint, $use-rem);
+
+	@if ($breakpoint-value) {
+
+		@media (min-width: $breakpoint-value) {
+			@content;
+		}
+	}
+}
+
+@mixin bp-down($breakpoint, $use-rem: true) {
+	$breakpoint-value: bp($breakpoint, $use-rem);
+	$diff: 1;
+
+	@if ($use-rem == true) {
+		$diff: rem-calc($diff);
+	}
+
+	@if ($breakpoint-value) {
+
+		@media (max-width: ($breakpoint-value - $diff)) {
+			@content;
+		}
+	}
+}
+
+@mixin bp-between($low, $high, $use-rem: true) {
+	$low-value: bp($low, $use-rem);
+	$high-value: bp($high, $use-rem);
+	$diff: 1;
+
+	@if ($use-rem == true) {
+		$diff: rem-calc($diff);
+	}
+
+	@if ($low-value and $high-value) {
+
+		@media (min-width: $low-value) and (max-width: ($high-value - $diff)) {
+			@content;
+		}
+	}
+}
+
+@mixin font-size($size, $line-height: null) {
+	font-size: #{$size}px;
+	font-size: rem-calc($size);
+
+	@if (type-of($line-height) == "number") {
+		$calculated: $line-height / $size;
+		$round: round($calculated * 10000) / 10000;
+
+		@if ($calculated != $round) {
+			/* stylelint-disable-next-line */
+			$calculated: calc(#{$line-height}em / #{$size});
+		}
+
+		line-height: $calculated;
+	}
+}
+

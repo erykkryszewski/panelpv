@@ -1,0 +1,18 @@
+.decorated-text {
+  width: 100%;
+  position: relative;
+
+  &__title {
+    text-transform: initial;
+    max-width: 1050px;
+    text-align: left;
+  }
+
+  &--background {
+    background: $theme-color2;
+
+    .decorated-text__title {
+      color: $white;
+    }
+  }
+}

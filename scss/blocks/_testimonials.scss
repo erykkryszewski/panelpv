@@ -1,0 +1,100 @@
+.testimonials {
+  width: 100%;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &__wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__item {
+    position: relative;
+    font-style: italic;
+    font-size: 17px;
+
+    &::before {
+      content: '';
+      display: block;
+      margin: 0;
+      padding: 0;
+      top: -5px;
+      left: 0px;
+      background: url('./images/quote.png') center/contain no-repeat;
+      height: 64px;
+      width: 64px;
+      z-index: 1;
+      position: absolute;
+      opacity: 0.05;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    margin: 25px 0 0;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__name {
+    font-size: 17px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__role {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__slider {
+    /* slick styles overwriting */
+    .slick-slide {
+      margin: 0 20px;
+    }
+
+    .slick-list {
+      margin: 0 rem-calc(-20);
+    }
+
+    .slick-dots {
+      margin: 15px auto 0;
+    }
+
+    .slick-arrow {
+      display: none;
+    }
+  }
+}

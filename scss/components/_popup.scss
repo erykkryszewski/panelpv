@@ -1,0 +1,86 @@
+.popup {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+  background: rgba($black, 0.5);
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+
+  &--newsletter {
+    z-index: 98;
+  }
+
+  &--shop {
+    z-index: 99;
+  }
+
+  &__wrapper {
+    background: $white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 50px 50px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: $theme-border-radius;
+    position: relative;
+
+    @media(max-width: 767px) {
+      padding: 25px;
+      max-height: 450px;
+      max-width: 100%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+  &__title {
+
+    &--shop {
+      color: $theme-color2;
+    }
+
+    &--newsletter {
+      color: $theme-color2;
+    }
+  }
+
+  &__code {
+    color: $theme-color2;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+    p {
+      margin: 0;
+
+      span {
+        display: block;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.onsale {
+  margin: 0;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $theme-color2;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 500;
+  font-family: $font-primary;
+  font-size: 12px;
+  border-top-left-radius: $theme-border-radius;
+}

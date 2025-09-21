@@ -1,0 +1,31 @@
+.stats {
+  width: 100%;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+
+    @media(max-width: 1199px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 20px 0 0;
+    @extend .h3;
+    text-align: center;
+  }
+}

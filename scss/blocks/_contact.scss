@@ -1,0 +1,162 @@
+.contact {
+  width: 100%;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &__details {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin: 3px 0 0;
+  }
+
+  &__info {
+    width: 100%;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @extend .h4;
+      margin: 17px 0 0;
+    }
+
+    p {
+      margin: 10px 0 0;
+
+      br {
+        display: none;
+      }
+    }
+
+    a {
+      @extend .paragraph;
+      margin: 10px 0 0px;
+      display: block;
+      font-weight: 500;
+      font-size: 15px;
+
+      &:last-of-type {
+        margin: -5px 0 0;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 230px;
+    height: 230px;
+
+    filter: brightness(0.96);
+  }
+
+  &__bottom-content {
+    margin: 30px 0 0;
+    padding: 30px 0 0;
+    border-top: 1px solid $light-gray;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @extend .h4;
+    }
+
+    * {
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__form {
+    margin: 3px 0 0;
+    padding: 50px;
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.1);
+    background-color: $white;
+
+    @media (max-width: 767px) {
+      margin: 30px 0 0;
+    }
+
+    form {
+      .gform_body {
+        .gform_fields {
+          grid-row-gap: 25px;
+          grid-column-gap: 25px;
+
+          > div {
+            width: 100%;
+
+            input {
+              line-height: 1 !important;
+            }
+
+            textarea {
+              height: 181px !important;
+            }
+
+            .ginput_recaptcha.gform-initialized {
+              margin: 0 0 10px;
+            }
+          }
+
+          .gfield {
+            &.gfield--type-consent {
+              margin: -20px 0 0;
+            }
+          }
+
+          p,
+          label {
+            margin: 0;
+            font-size: 15px;
+            color: $input-color;
+
+            a {
+              color: $theme-color;
+              text-decoration: underline;
+              font-weight: 400;
+            }
+          }
+
+          // if you want to have no labels
+          .gfield_label {
+            display: none;
+          }
+
+          fieldset {
+            margin: 0;
+            border: none !important;
+          }
+        }
+      }
+
+      .gform_footer {
+        margin: 15px 0 0 !important;
+        text-align: right;
+        display: block !important;
+
+        @media (max-width: 767px) {
+          text-align: center;
+          margin: 25px 0 0 !important;
+        }
+
+        input {
+          border-radius: $theme-border-radius !important;
+        }
+      }
+    }
+
+    .gform_confirmation_message {
+      @extend .paragraph;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.blank-image {
+  width: 100%;
+  height: 500px;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  @media(max-width: 767px) {
+    height: 330px !important;
+  }
+}

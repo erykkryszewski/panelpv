@@ -1,0 +1,23 @@
+.animated-number {
+  min-width: 200px;
+  font-weight: 600;
+
+  &__circle {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    stroke-dasharray: 0 100; 
+
+    &--animated {
+      animation: animated-number-fill 2s ease-out forwards;
+    }
+  }
+}
+
+@keyframes animated-number-fill {
+  from {
+    stroke-dasharray: 0 100; 
+  }
+  to {
+    stroke-dasharray: var(--dasharray) 100; 
+  }
+}

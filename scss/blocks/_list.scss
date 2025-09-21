@@ -1,0 +1,62 @@
+.list {
+  width: 100%;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &--padding {
+    padding: 85px 0 95px;
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+    margin: 40px 0 0;
+    display: flex;
+
+    @media(max-width: 767px) {
+      flex-direction: column;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &--unordered {
+      &::before {
+        content: '';
+        display: block;
+        background: url('./images/icon-checked.png') center/contain no-repeat;
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        margin: 0 25px 0 0;
+        filter: brightness(0);
+
+        @media(max-width: 767px) {
+          margin: 0 0 10px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 15px;
+  }
+
+  &__number {
+    @extend .h1;
+    line-height: 1;
+    margin: -4px 50px 0 0;
+
+    @media(max-width: 767px) {
+      margin: 0 0 10px;
+    }
+  }
+}

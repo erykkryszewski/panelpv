@@ -1,0 +1,118 @@
+/*
+Theme Name: Ercoding Theme
+Theme URI: https://ercoding.pl/
+Author: ercoding.pl
+Author URI: https://ercoding.pl/
+Version: 1.0
+Requires at least: 5.3
+Tested up to: 5.5
+Requires PHP: 7.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ercodingtheme
+*/
+
+// @import "scss/integrations/aos";
+@import 'scss/integrations/bootstrap';
+@import 'scss/integrations/fancybox';
+@import 'scss/integrations/slick';
+
+@import 'scss/variables';
+@import 'scss/style-editor-variables';
+
+@import 'scss/global/functions';
+@import 'scss/global/typography';
+@import 'scss/global/global';
+@import 'scss/global/classes';
+
+@import 'scss/components/preloader';
+@import 'scss/components/button';
+@import 'scss/components/hamburger';
+@import 'scss/components/newsletter';
+@import 'scss/components/form';
+@import 'scss/components/inputs';
+@import 'scss/components/social-media';
+@import 'scss/components/section-id';
+@import 'scss/components/spacer';
+@import 'scss/components/slick-dots';
+@import 'scss/components/scrollbar';
+@import 'scss/components/animated-number';
+@import 'scss/components/prev-and-next-posts';
+@import 'scss/components/opening-hours';
+@import 'scss/components/top-bar';
+@import 'scss/components/bottom-bar';
+@import 'scss/components/pagination';
+@import 'scss/components/popup';
+
+@import 'scss/blocks/hero-slider';
+@import 'scss/blocks/numbers';
+@import 'scss/blocks/popular-products';
+@import 'scss/blocks/cta';
+@import 'scss/blocks/testimonials';
+@import 'scss/blocks/icons';
+@import 'scss/blocks/text-images';
+@import 'scss/blocks/text-with-image';
+@import 'scss/blocks/two-columns-text';
+@import 'scss/blocks/blank-button';
+@import 'scss/blocks/section-title';
+@import 'scss/blocks/three-images';
+@import 'scss/blocks/two-images';
+@import 'scss/blocks/contact';
+@import 'scss/blocks/map';
+@import 'scss/blocks/subpage-hero';
+@import 'scss/blocks/motto-bar';
+@import 'scss/blocks/team';
+@import 'scss/blocks/program';
+@import 'scss/blocks/list';
+@import 'scss/blocks/gallery';
+@import 'scss/blocks/iframe';
+@import 'scss/blocks/blank-image';
+@import 'scss/blocks/timeline';
+@import 'scss/blocks/faq';
+@import 'scss/blocks/thank-you';
+@import 'scss/blocks/two-buttons';
+@import 'scss/blocks/two-columns-list';
+@import 'scss/blocks/wyswig-content';
+@import 'scss/blocks/blog-archive';
+@import 'scss/blocks/cta-hero';
+@import 'scss/blocks/button-banner';
+@import 'scss/blocks/three-boxes';
+@import 'scss/blocks/three-columns-content';
+@import 'scss/blocks/border-divider';
+@import 'scss/blocks/counter';
+@import 'scss/blocks/stats';
+@import 'scss/blocks/map-snazzy';
+@import 'scss/blocks/logos';
+@import 'scss/blocks/text-image-decorated';
+@import 'scss/blocks/decorated-text';
+@import 'scss/blocks/offer';
+@import 'scss/blocks/benefits';
+@import 'scss/blocks/report';
+@import 'scss/blocks/members';
+@import 'scss/blocks/five-boxes';
+
+@import 'scss/sections/header';
+@import 'scss/sections/nav';
+@import 'scss/sections/footer';
+@import 'scss/sections/blog';
+@import 'scss/sections/single';
+@import 'scss/sections/rules-pages';
+
+@import 'scss/woocommerce/global-woocommerce';
+@import 'scss/woocommerce/archive-product';
+@import 'scss/woocommerce/cart';
+@import 'scss/woocommerce/checkout';
+@import 'scss/woocommerce/content-product';
+@import 'scss/woocommerce/order-received';
+@import 'scss/woocommerce/product-filters';
+@import 'scss/woocommerce/single-product';
+@import 'scss/woocommerce/variations';
+@import 'scss/woocommerce/my-account';
+@import 'scss/woocommerce/breadcrumbs';
+@import 'scss/woocommerce/sidebar';
+@import 'scss/woocommerce/empty-cart';
+@import 'scss/woocommerce/woo-pagination';
+@import 'scss/woocommerce/empty-cart';
+@import 'scss/woocommerce/related-products';
+@import 'scss/woocommerce/sale-component';
+@import 'scss/woocommerce/shop-hero';

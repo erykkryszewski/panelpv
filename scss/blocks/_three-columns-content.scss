@@ -1,0 +1,28 @@
+.three-columns-content {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &__item {
+    width: 100%;
+    margin: 45px 0 0;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  p {
+    &:first-of-type {
+      margin: 30px 0 0;
+    }
+  }
+
+  &__button {
+    margin: 25px 0 0;
+  }
+}

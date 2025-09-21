@@ -1,0 +1,39 @@
+.mailchimp-newsletter {
+  width: 100%;
+  margin: 25px 0 0;
+
+  &__form {
+    display: flex;
+
+    @media(max-width: 767px) {
+      justify-content: center;
+    }
+
+    input {
+      max-width: 143px;
+    }
+  }
+
+  p {
+    margin: 10px 0 0;
+    font-size: 15px;
+
+    label {
+      input {
+        margin: 0 5px 0 0;
+        position: relative;
+        bottom: -2px;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.mc4wp-form-submitted.mc4wp-form-success {
+  .mailchimp-newsletter {
+    display: none;
+  }
+}

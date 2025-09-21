@@ -1,0 +1,132 @@
+/* woocommerce custom filtration */
+
+.woocommerce-ordering {
+  margin: 0 0 30px;
+  max-width: 200px;
+}
+
+.product-filters {
+  margin: 30px 0 0;
+  position: relative;
+
+  @media(max-width: 1270px) {
+    margin: 30px 0;
+    max-width: calc(100% - 40px);
+  }
+  
+  form {
+    position: absolute;
+    top: 0;
+    
+    @media(max-width: 1270px) {
+      position: static;
+    }
+
+    > ul {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 20px;
+
+      @media(max-width: 1270px) {
+        flex-direction: row;
+      }
+
+      @media(max-width: 767px) {
+        flex-wrap: wrap;
+      }
+
+      @media(max-width: 565px) {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      li {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        h4 {
+          padding: 0;
+          margin: 0 0 10px;
+
+          @media(max-width: 1270px) {
+            margin: -5px 0 0;
+          }
+
+          @media(max-width: 565px) {
+            margin: 5px 0 0;
+          }
+        }
+
+        label {
+          @extend .paragraph;
+          font-size: 15px;
+          margin: -1px 0 0;
+          position: relative;
+          top: -1px;
+          font-weight: 500;
+        }
+
+        input, select {
+          background: transparent !important;
+          border-radius: $theme-border-radius !important;
+        }
+
+        select {
+          option {
+            background: transparent !important;
+          }
+        }
+
+        &:first-child {
+          margin: 0;
+        }
+
+        // search li
+        &.sf-field-search {
+          @media(max-width: 767px) {
+            order: 1;
+            width: calc(50% - 10px);
+          }
+        }
+
+        // cat li
+        &.sf-field-taxonomy-product_cat {
+          @media(max-width: 767px) {
+            order: 3;
+            width: 100%;
+          }
+        }
+
+        // price
+        &.sf-field-post-meta-_price {
+          @media(max-width: 767px) {
+            order: 2;
+            width: calc(50% - 10px);
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          
+          @media(max-width: 1270px) {
+            margin: -8px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.woocommerce-no-products-found {
+  max-width: 992px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.searchandfilter .noUi-connect {
+  background-color: $theme-color2;
+}

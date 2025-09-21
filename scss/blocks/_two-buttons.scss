@@ -1,0 +1,31 @@
+.two-buttons {
+  width: 100%;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    @media(max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    @media(max-width: 767px) {
+      min-width: 203px;
+      text-align: center;
+    }
+
+    &:last-child {
+      margin: 0 0 0 15px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.three-boxes {
+  width: 100%;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &__wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+    padding: 25px;
+    background: $white;
+    margin: 30px 0 0;
+    box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: calc(100% - 30px);
+
+    @media (max-width: 991px) {
+      height: auto;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    max-width: 64px;
+  }
+
+  &__content {
+    width: 100%;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      @extend .h3;
+      margin: 25px 0 0;
+    }
+
+    p {
+      font-size: 15px;
+      margin: 15px 0 0;
+      line-height: 1.4;
+    }
+  }
+
+  &__button {
+    margin: 20px 0 0;
+  }
+}

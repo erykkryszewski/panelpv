@@ -1,0 +1,18 @@
+#adminmenu li#menu-comments {
+  display: none;
+}
+
+#adminmenu .dashicons-admin-post::before {
+  content: '\f123';
+}
+
+.acf-fields {
+  .acf-field.editor-small {
+    .acf-editor-wrap {
+      iframe {
+        height: 120px !important;
+        min-height: 120px !important;
+      }
+    }
+  }
+}

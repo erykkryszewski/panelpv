@@ -1,0 +1,27 @@
+/* related products */
+.products.related, .products.up-sells {
+  position: relative;
+  z-index: 1;
+
+  > h2 {
+    @extend .h3;
+    text-align: center;
+    margin: 0 auto;
+    background: transparent;
+  }
+  
+  .products.columns-4 {
+    margin: 10px 0 0;
+    @extend .row;
+
+    > li {
+      @extend .col-sm-6;
+      @extend .col-lg-4;
+      display: none;
+
+      &:first-child, &:nth-child(2), &:nth-child(3) {
+        display: block;
+      }
+    }
+  }
+}

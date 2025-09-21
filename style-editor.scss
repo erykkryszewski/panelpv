@@ -1,0 +1,19 @@
+@import "scss/style-editor-variables";
+@import "scss/variables";
+@import "scss/integrations/bootstrap";
+
+.editor-styles-wrapper {
+	@import "scss/global/functions";
+	@import "scss/components/button";
+	@import "scss/global/mixins";
+	@import "scss/global/global";
+	@import "scss/global/typography";
+
+	.acf-block-preview {
+		@import "scss/blocks/cta-hero";
+		@import "scss/blocks/two-columns-text";
+		@import "scss/blocks/button-banner";
+	}
+}
+
+@import "scss/admin";

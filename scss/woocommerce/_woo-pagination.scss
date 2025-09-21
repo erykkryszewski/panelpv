@@ -1,0 +1,53 @@
+// .woocommerce-pagination, .pagination {
+//   width: 100%;
+//   margin: 40px 0 0;
+
+//   ul {
+//     display: flex;
+//     width: 100%;
+//     justify-content: flex-end;
+//     align-items: center;
+
+//     &::before {
+//       display: block;
+//       content: "Strony: ";
+//       @extend .paragraph;
+//       font-size: 14px;
+//       margin: 0;
+//       color: $gray;
+//     }
+
+//     li {
+//       margin: 0 0 0 5px;
+//       list-style: none;
+
+//       &:last-child {
+//         margin: 0;
+//       }
+
+//       a, span {
+//         font-size: 14px;
+//         color: $gray;
+//         padding: 5px;
+//         display: block;
+//       }
+
+//       a {
+//         font-weight: 400;
+//       }
+
+//       span {
+//         font-weight: 500;
+//         color: $theme-color;
+//         font-size: 16px;
+//         margin: rem-calc(-0.5) 0 0;
+//       }
+      
+//       a {
+//         &.next, &.prev {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }

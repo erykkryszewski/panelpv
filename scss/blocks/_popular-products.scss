@@ -1,0 +1,32 @@
+.popular-products {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  > h2 {
+    text-align: center;
+    margin: 0 0 25px;
+  }
+
+  &__row {
+    /* temporary */
+    justify-content: center;
+
+    > li {
+      @extend .col-12;
+      @extend .col-md-6;
+      @extend .col-lg-3;
+      list-style: none;
+
+      .product__image {
+        @media(min-width: 992px) {
+          height: 200px;
+        }
+      }
+    }
+  }
+}

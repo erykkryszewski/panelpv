@@ -1,0 +1,25 @@
+.thank-you {
+  width: 100%;
+  text-align: center;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend .h2;
+  }
+
+  &__button {
+    margin: 25px auto 0;
+  }
+}

@@ -1,0 +1,22 @@
+.motto-bar {
+  width: 100%;
+  background: $light-gray;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &__content {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+
+    p {
+      @extend .h3;
+      margin: 0;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+/* 
+ * Import fonts
+ */
+
+/*
+ * Typography
+ */
+
+h1,
+.h1,
+h1 > strong,
+h1 > b,
+h1 > span {
+  color: $text-color;
+  font-family: $font-decorated;
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 600;
+
+  @media (max-width: 1199px) {
+    font-size: 61px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 58px;
+  }
+}
+
+h2,
+.h2,
+h2 > strong,
+h2 > b,
+h2 > span {
+  color: $text-color;
+  font-family: $font-decorated;
+  font-size: 45px;
+  line-height: 1.1;
+  font-weight: 600;
+
+  @media (max-width: 1199px) {
+    font-size: 30px;
+  }
+}
+
+h3,
+.h3,
+h3 > strong,
+h3 > b,
+h3 > span {
+  color: $text-color;
+  font-family: $font-decorated;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 600;
+
+  @media (max-width: 1199px) {
+    font-size: 22px;
+  }
+}
+
+h4,
+.h4,
+h4 > strong,
+h4 > b,
+h4 > span {
+  color: $text-color;
+  font-family: $font-decorated;
+  font-size: 21px;
+  line-height: 1.1;
+  font-weight: 600;
+
+  @media (max-width: 1199px) {
+    font-size: 19px;
+  }
+}
+
+p,
+.paragraph {
+  font-size: 19px;
+  line-height: 1.65;
+  font-weight: 400;
+  margin: 19px 0 0;
+  color: $text-color;
+  font-family: $font-primary;
+
+  > a {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.65;
+    text-decoration: underline;
+    display: inline-block;
+    color: $text-color;
+    font-family: $font-primary;
+
+    &:hover {
+      text-decoration: underline;
+      color: $text-color;
+    }
+  }
+
+  > strong {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.65;
+    color: $text-color;
+    font-family: $font-primary;
+  }
+
+  > span {
+    font-size: 19px;
+    line-height: 1.65;
+    font-weight: 400;
+    color: $text-color;
+    font-family: $font-primary;
+  }
+
+  &.small {
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 400;
+    color: $text-color;
+    font-family: $font-primary;
+    margin: 19px 0 0;
+
+    > a,
+    > strong,
+    > span {
+      font-size: 16px;
+      line-height: 1.65;
+      font-weight: 400;
+      color: $text-color;
+      font-family: $font-primary;
+    }
+  }
+}
+
+ul > li,
+ol > li {
+  font-size: 19px;
+  line-height: 1.65;
+  font-weight: 400;
+  font-family: $font-primary;
+
+  > strong {
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.65;
+    color: $text-color;
+    font-family: $font-primary;
+  }
+
+  > span {
+    font-size: 19px;
+    line-height: 1.65;
+    font-weight: 400;
+    color: $text-color;
+    font-family: $font-primary;
+  }
+}

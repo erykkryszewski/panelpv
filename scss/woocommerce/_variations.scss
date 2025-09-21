@@ -1,0 +1,71 @@
+
+
+.woocommerce-variation.single_variation {
+  display: flex;
+  flex-direction: column-reverse;
+
+  .woocommerce-variation-description {
+    display: none;
+  }
+}
+
+.single_variation_wrap {
+  margin: 20px 0 0;
+
+  span.price {
+    margin: 0 0 10px;
+  }
+}
+
+.variations {
+  margin: 0;
+
+  tbody {
+    > tr {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      > td {
+        width: 100%;
+        margin: 10px 0 0;
+      }
+    }
+  }
+
+  th {
+    @extend .paragraph;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  label {
+    margin: 0;
+  }
+  
+  select {
+    width: 100%;
+
+    @media(max-width: 767px) {
+      min-width: 126px;
+    }
+
+    @media(max-width: 449px) {
+      min-width: initial;
+      max-width: 130px;
+    }
+  }
+}
+
+a.reset_variations {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  z-index: -20;
+}
+
+p.stock {
+  margin: 0;
+}

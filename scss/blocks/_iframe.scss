@@ -1,0 +1,77 @@
+.iframe {
+  width: 100%;
+  position: relative;
+
+  &--background {
+    background: $very-light-gray;
+  }
+
+  &__element {
+    width: 100%;
+    height: 500px;
+    
+    @media(max-width: 767px) {
+      height: 330px !important;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+  }
+
+  &__overlay {
+    width: 100%;
+    position: relative;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      filter: brightness(0.8) contrast(1);
+    }
+  }
+
+  &__decorated-image {
+    position: absolute;
+    width: 300px;
+    top: -258px;
+    right: 296px;
+    transform: rotate(14deg);
+    opacity: 0.05;
+  }
+
+  &__link {
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      right: 50%;
+      bottom: 50%;
+      transform: translateX(50%) translateY(50%);
+      z-index: 3;
+      background: url('./images/play-icon-psd.png') center/contain no-repeat;
+      width: 90px;
+      height: 90px;
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+      transition: all 300ms ease;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

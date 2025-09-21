@@ -1,0 +1,41 @@
+.members {
+  width: 100%;
+
+  &__content {
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $light-gray;
+
+    p {
+      font-size: 19px !important;
+      line-height: 1.65 !important;
+      font-weight: 400 !important;
+      margin: 0px 0 20px !important;
+      color: $text-color !important;
+      font-family: $font-primary !important;
+    }
+
+    a {
+      font-weight: 500 !important;
+      font-size: 19px !important;
+      line-height: 1.65 !important;
+      text-decoration: none !important;
+      display: inline-block !important;
+      color: $text-color !important;
+      font-family: $font-primary !important;
+
+      &:hover {
+        text-decoration: none !important;
+        color: $text-color !important;
+      }
+    }
+
+    strong {
+      font-weight: 600 !important;
+      font-size: 19px !important;
+      line-height: 1.65 !important;
+      color: $text-color !important;
+      font-family: $font-primary !important;
+    }
+  }
+}

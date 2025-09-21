@@ -1,0 +1,12 @@
+.opening-hours {
+  margin: 15px 0 0;
+  
+  > p {
+    margin: 0;
+
+    span {
+      min-width: 100px;
+      display: inline-block;
+    }
+  }
+}
