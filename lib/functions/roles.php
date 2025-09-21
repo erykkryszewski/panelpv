@@ -161,3 +161,44 @@ add_filter('wp_nav_menu_objects', function ($panelpvMenuItems, $panelpvArgs) {
 
     return $panelpvMenuItems;
 }, 10, 2);
+
+
+add_action('template_redirect', function () {
+    $panelpvRequestUri = isset($_SERVER['REQUEST_URI']) ? sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])) : '';
+    if ($panelpvRequestUri === '') {
+        return;
+    }
+
+    $panelpvIsWspierUrl = strpos($panelpvRequestUri, 'czlonkostwo-wspier') !== false;
+    $panelpvIsZwyczUrl = strpos($panelpvRequestUri, 'czlonkostwo-zwycz') !== false;
+
+    if (!$panelpvIsWspierUrl && !$panelpvIsZwyczUrl) {
+        return;
+    }
+
+    $panelpvCurrentUrl = (is_ssl() ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $panelpvRequestUri;
+    $panelpvRedirectUrl = add_query_arg('redirect_to', rawurlencode($panelpvCurrentUrl), home_url('/moje-konto/'));
+
+    if (!is_user_logged_in()) {
+        wp_safe_redirect($panelpvRedirectUrl);
+        exit;
+    }
+
+    $panelpvUser = wp_get_current_user();
+    $panelpvRoles = is_array($panelpvUser->roles) ? $panelpvUser->roles : array();
+    $panelpvIsAdmin = in_array('administrator', $panelpvRoles, true);
+
+    if ($panelpvIsAdmin) {
+        return;
+    }
+
+    if ($panelpvIsWspierUrl && !in_array('czlonek_wspierajacy', $panelpvRoles, true)) {
+        wp_safe_redirect($panelpvRedirectUrl);
+        exit;
+    }
+
+    if ($panelpvIsZwyczUrl && !in_array('czlonek_zwyczajny', $panelpvRoles, true)) {
+        wp_safe_redirect($panelpvRedirectUrl);
+        exit;
+    }
+});
