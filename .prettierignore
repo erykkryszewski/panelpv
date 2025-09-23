@@ -1,2 +1,5 @@
-*.php
-*.phtml
+node_modules/
+vendor/
+dist/
+build/
+*.min.*

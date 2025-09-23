@@ -1,0 +1,54 @@
+{
+  "keep": [
+    "blank-button",
+    "blank-image",
+    "blog-archive",
+    "border-divider",
+    "button-banner",
+    "contact",
+    "counter",
+    "cta-hero",
+    "cta",
+    "decorated-text",
+    "faq",
+    "gallery",
+    "hero-slider",
+    "icons",
+    "iframe",
+    "list",
+    "logos",
+    "map",
+    "motto-bar",
+    "numbers",
+    "offer",
+    "products",
+    "program",
+    "section-title",
+    "shortcode",
+    "stats",
+    "subpage-hero",
+    "team",
+    "testimonials",
+    "text-image-decorated",
+    "text-images",
+    "text-with-image",
+    "thank-you",
+    "three-boxes",
+    "three-columns-content",
+    "three-images",
+    "two-buttons",
+    "two-columns-list",
+    "two-columns-text",
+    "two-images",
+    "wyswig-content"
+  ],
+  "aliases": {
+    "scss": {
+      "products": "popular-products"
+    },
+    "js": {}
+  },
+  "features": {
+    "woocommerce": false
+  }
+}
