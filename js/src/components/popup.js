@@ -39,7 +39,7 @@ import $ from 'jquery';
 
 //   // Shop Popup Logic
 //   const currentUrl = window.location.href;
-  
+
 //   if (/sklep|produkt/.test(currentUrl)) {
 //     localStorage.setItem('shopVisited', 'true');
 //   } else if (shouldShowShopPopup()) {

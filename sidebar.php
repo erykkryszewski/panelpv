@@ -1,3 +1,1 @@
-<div>
-  <?php dynamic_sidebar('ercodingtheme-sidebar'); ?>
-</div>
+<div><?php dynamic_sidebar('ercodingtheme-sidebar'); ?></div>

@@ -1,5 +1,6 @@
 /* related products */
-.products.related, .products.up-sells {
+.products.related,
+.products.up-sells {
   position: relative;
   z-index: 1;
 
@@ -9,7 +10,7 @@
     margin: 0 auto;
     background: transparent;
   }
-  
+
   .products.columns-4 {
     margin: 10px 0 0;
     @extend .row;
@@ -19,7 +20,9 @@
       @extend .col-lg-4;
       display: none;
 
-      &:first-child, &:nth-child(2), &:nth-child(3) {
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3) {
         display: block;
       }
     }

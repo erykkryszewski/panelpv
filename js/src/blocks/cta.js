@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // $.fn.isInViewport = function () {
@@ -25,7 +25,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 //   gsap.registerPlugin(ScrollTrigger);
 
 //   let cta = $('.cta__wrapper');
-  
+
 //   gsap.fromTo(cta.children(), { y: 100, opacity: 0 }, {y: 0, opacity: 1, stagger: 0.1, duration: 1, scrollTrigger: {
 //     trigger: cta,
 //     start: 'top 90%',

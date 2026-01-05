@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * ACF Block: Border divider
@@ -15,5 +15,5 @@ $section_id = get_field('section_id');
 ?>
 
 <div class="container">
-  <div class="border-divider"></div>
+    <div class="border-divider"></div>
 </div>

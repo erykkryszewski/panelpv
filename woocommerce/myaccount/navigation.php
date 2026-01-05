@@ -16,7 +16,7 @@
  */
 
 if (!defined('ABSPATH')) {
-	exit;
+    exit();
 }
 
 do_action('woocommerce_before_account_navigation');

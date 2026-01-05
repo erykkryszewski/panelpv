@@ -1,11 +1,8 @@
 /* styles are copied from GYG and just modified, there is no scss here */
 
-
 /* login and register */
 
-
 .woocommerce-account {
-
   .container {
     position: relative;
   }
@@ -13,23 +10,24 @@
   .main {
     padding: 150px 0 0 !important;
 
-    @media(max-width: 991px) {
+    @media (max-width: 991px) {
       padding: 200px 0 0 !important;
     }
   }
 
-  .u-columns.col2-set, .u-columns.login-columns {
+  .u-columns.col2-set,
+  .u-columns.login-columns {
     display: flex;
     width: 100%;
     max-width: 1100px;
     margin: auto;
     min-height: 65vh;
-  
-    @media(max-width: 991px) {
+
+    @media (max-width: 991px) {
       flex-direction: column;
     }
   }
-  
+
   .woocommerce-notices-wrapper {
     position: absolute;
     top: -100px;
@@ -37,91 +35,99 @@
     transform: translateX(50%);
     width: calc(100% - 30px);
   }
-  
+
   .woocommerce-notices-wrapper li {
     font-size: rem-calc(14.5);
     color: red;
   }
-  
+
   .woocommerce-account .woocommerce h2 {
     color: #000;
     margin: 20px 0 !important;
     font-size: 18px;
     line-height: 1.4;
   }
-  
+
   .woocommerce-account .woocommerce button {
     margin: 20px 0 0;
   }
-  
+
   .u-columns.col2-set {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
   }
-  
-  @media(max-width: 768px) {
+
+  @media (max-width: 768px) {
     .u-columns.col2-set {
       flex-wrap: wrap;
       margin-bottom: 30px;
     }
   }
-  
-  .u-column1.login-column, .u-column2.login-column {
+
+  .u-column1.login-column,
+  .u-column2.login-column {
     width: 100%;
     padding: 80px 0;
-  
-    @media(max-width: 991px) {
+
+    @media (max-width: 991px) {
       padding: 20px 0;
     }
   }
-  
-  .woocommerce-form.woocommerce-form-login input, .woocommerce-form.woocommerce-form-login label, .woocommerce-form.woocommerce-form-register input, .woocommerce-form.woocommerce-form-register label {
+
+  .woocommerce-form.woocommerce-form-login input,
+  .woocommerce-form.woocommerce-form-login label,
+  .woocommerce-form.woocommerce-form-register input,
+  .woocommerce-form.woocommerce-form-register label {
     color: $input-color !important;
     width: 100%;
     max-width: 450px;
     margin: 7px 0 0;
   }
-  
-  @media(max-width: 768px) {
-    .woocommerce-form.woocommerce-form-login input, .woocommerce-form.woocommerce-form-login label, .woocommerce-form.woocommerce-form-register input, .woocommerce-form.woocommerce-form-register label {
+
+  @media (max-width: 768px) {
+    .woocommerce-form.woocommerce-form-login input,
+    .woocommerce-form.woocommerce-form-login label,
+    .woocommerce-form.woocommerce-form-register input,
+    .woocommerce-form.woocommerce-form-register label {
       max-width: initial;
     }
   }
-  
+
   input.woocommerce-form__input.woocommerce-form__input-checkbox {
     width: auto;
     border: 1px solid $input-color !important;
     margin: 20px 0 0;
   }
-  
+
   .password-input {
     width: 100%;
   }
-  
-  .woocommerce-form.woocommerce-form-login input, .woocommerce-form.woocommerce-form-register input {
+
+  .woocommerce-form.woocommerce-form-login input,
+  .woocommerce-form.woocommerce-form-register input {
     margin: 10px 0 0;
     width: 100%;
     @extend .inputs;
   }
-  
+
   .form-row {
     margin: 10px 0 0;
   }
-  
+
   .woocommerce-privacy-policy-text {
     p {
       margin: 13px 0 0;
     }
   }
-  
+
   .social-media-buttons {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 15px 0 0;
-  
+
     a {
       display: inline-block;
       margin: 10px 0 0;
@@ -132,27 +138,27 @@
       padding: 10px 20px;
       min-width: 170px;
       text-align: center;
-  
+
       &.facebook-button {
-        background: #4267B2;
-  
+        background: #4267b2;
       }
-  
+
       &.google-button {
-        background: #DB4437;
+        background: #db4437;
       }
     }
   }
-  
+
   .custom-checkbox {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-  
-    > input, label {
+
+    > input,
+    label {
       width: auto !important;
     }
-  
+
     > input {
       &:first-child {
         margin: 0 10px 0 0 !important;
@@ -164,13 +170,12 @@
 .my-account__checkbox-label {
   display: flex;
   align-items: center;
-  
+
   input {
     width: auto !important;
     margin: 0 10px 0 0 !important;
   }
 }
-
 
 /* inside panel */
 
@@ -191,7 +196,7 @@
   padding: 0 0 15px;
   margin: 80px 0 0;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     margin: 20px 0 0;
   }
 }
@@ -217,7 +222,7 @@
   padding: 0 0 0 30px;
   margin: 80px 0 0;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     margin: 0;
   }
 }
@@ -232,7 +237,10 @@
   background: #efefef;
 }
 
-.woocommerce-orders-table.woocommerce-MyAccount-orders.shop_table.shop_table_responsive.my_account_orders.account-orders-table th, .woocommerce-orders-table.woocommerce-MyAccount-orders.shop_table.shop_table_responsive.my_account_orders.account-orders-table td {
+.woocommerce-orders-table.woocommerce-MyAccount-orders.shop_table.shop_table_responsive.my_account_orders.account-orders-table
+  th,
+.woocommerce-orders-table.woocommerce-MyAccount-orders.shop_table.shop_table_responsive.my_account_orders.account-orders-table
+  td {
   min-width: 150px;
   font-size: 16px;
   padding: rem-calc(34.9);
@@ -256,7 +264,8 @@
 }
 
 /* addresses */
-.u-column1.col-1.woocommerce-Address, .u-column2.col-2.woocommerce-Address  {
+.u-column1.col-1.woocommerce-Address,
+.u-column2.col-2.woocommerce-Address {
   padding: 0 !important;
   margin: 15px 0 0;
 }
@@ -271,7 +280,8 @@
   }
 }
 
-address, em {
+address,
+em {
   font-size: 12px;
   line-height: 1.3;
 }
@@ -280,7 +290,8 @@ address, em {
   display: block;
   width: 100%;
 
-  input, select {
+  input,
+  select {
     margin: 10px 0 0;
     width: 100%;
     @extend .inputs;
@@ -322,7 +333,8 @@ address, em {
 
 /* account details */
 
-.woocommerce-EditAccountForm.edit-account input, .woocommerce-EditAccountForm.edit-account label {
+.woocommerce-EditAccountForm.edit-account input,
+.woocommerce-EditAccountForm.edit-account label {
   color: $input-color !important;
   width: 100%;
   max-width: 450px;
@@ -347,7 +359,7 @@ p.woocommerce-form-row {
   flex-direction: column;
   align-items: flex-start;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     align-items: center;
   }
 }
@@ -359,7 +371,7 @@ fieldset {
 
 /* rwd for everything */
 
-@media(max-width: 1099px) {
+@media (max-width: 1099px) {
   .woocommerce-account .woocommerce {
     flex-wrap: wrap;
   }
@@ -367,7 +379,7 @@ fieldset {
   .woocommerce-account .woocommerce nav {
     width: 100% !important;
   }
-  
+
   .woocommerce-account .woocommerce nav ul {
     display: flex;
     justify-content: center;
@@ -395,7 +407,7 @@ fieldset {
   .main {
     padding: 0 !important;
 
-    @media(max-width: 991px) {
+    @media (max-width: 991px) {
       padding: 0 !important;
     }
   }

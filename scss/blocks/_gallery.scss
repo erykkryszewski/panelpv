@@ -4,7 +4,7 @@
   overflow: hidden;
   position: relative;
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     padding: 0 15px;
   }
 
@@ -17,8 +17,8 @@
 
     .slick-slide {
       margin: 0 15px;
-      
-      @media(max-width: 767px) {
+
+      @media (max-width: 767px) {
         margin: 0 rem-calc(7.5);
       }
     }
@@ -26,7 +26,7 @@
     .slick-list {
       margin: 0 rem-calc(-15);
 
-      @media(max-width: 767px) {
+      @media (max-width: 767px) {
         margin: 0 rem-calc(-7.5);
       }
     }
@@ -44,15 +44,15 @@
       height: 400px;
     }
 
-    @media(max-width: 1599px) {
+    @media (max-width: 1599px) {
       height: 330px;
     }
 
-    @media(max-width: 1199px) {
+    @media (max-width: 1199px) {
       height: 250px;
     }
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       height: 200px;
     }
   }

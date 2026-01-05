@@ -12,7 +12,6 @@
     position: relative;
     width: 100%;
 
-        
     &:hover {
       .cta-hero__image--animated {
         img {
@@ -22,7 +21,9 @@
     }
   }
 
-  &__image, &__video, &__overlay {
+  &__image,
+  &__video,
+  &__overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -51,7 +52,7 @@
       &.scrolled {
         top: -45px;
 
-        @media(max-width: 1199px) {
+        @media (max-width: 1199px) {
           top: -38px;
         }
       }
@@ -77,7 +78,7 @@
       &.scrolled {
         top: -45px;
 
-        @media(max-width: 1199px) {
+        @media (max-width: 1199px) {
           top: -38px;
         }
       }
@@ -86,9 +87,16 @@
 
   &__overlay {
     z-index: 0;
-    background: linear-gradient(61deg, rgb(28, 30, 43) 0%, rgba(28, 30, 43, 0.7) 23%, rgba(28, 30, 43, 0.5) 48%, rgba(28, 30, 43, 0.2) 89%, rgba(28, 30, 43, 0.1) 100%);
+    background: linear-gradient(
+      61deg,
+      rgb(28, 30, 43) 0%,
+      rgba(28, 30, 43, 0.7) 23%,
+      rgba(28, 30, 43, 0.5) 48%,
+      rgba(28, 30, 43, 0.2) 89%,
+      rgba(28, 30, 43, 0.1) 100%
+    );
   }
-  
+
   &__link {
     position: absolute;
     top: 0;
@@ -112,23 +120,23 @@
     z-index: 1;
     text-align: center;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       height: 500px;
       padding: 25px;
     }
 
-    @media(max-width: 449px) {
+    @media (max-width: 449px) {
       padding: 15px;
     }
 
     &--full {
       padding: 45px 0;
 
-      @media(max-width: 767px) {
+      @media (max-width: 767px) {
         padding: 25px 0;
       }
-  
-      @media(max-width: 449px) {
+
+      @media (max-width: 449px) {
         padding: 15px 0;
       }
     }
@@ -138,16 +146,22 @@
     width: 100%;
     max-width: 400px;
 
-    img, svg {
+    img,
+    svg {
       filter: brightness(0) invert(1);
     }
   }
 
-  &__title, &__subtitle, &__button, &__content > p {
+  &__title,
+  &__subtitle,
+  &__button,
+  &__content > p {
     position: relative;
   }
 
-  &__title, &__subtitle, &__content > p {
+  &__title,
+  &__subtitle,
+  &__content > p {
     color: $white;
   }
 

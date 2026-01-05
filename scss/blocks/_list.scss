@@ -16,7 +16,7 @@
     margin: 40px 0 0;
     display: flex;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       flex-direction: column;
     }
 
@@ -39,7 +39,7 @@
         margin: 0 25px 0 0;
         filter: brightness(0);
 
-        @media(max-width: 767px) {
+        @media (max-width: 767px) {
           margin: 0 0 10px;
         }
       }
@@ -55,7 +55,7 @@
     line-height: 1;
     margin: -4px 50px 0 0;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       margin: 0 0 10px;
     }
   }

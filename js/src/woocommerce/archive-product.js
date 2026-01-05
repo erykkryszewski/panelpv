@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(document).ready(function() {
+$(document).ready(function () {
   function moveHeaderToFirst() {
     let archiveTitle = $('.woocommerce-products-header');
     let parentContainer = $('#primary main#main.site-main');
@@ -11,7 +11,7 @@ $(document).ready(function() {
 
   moveHeaderToFirst();
 
-  $(document).ajaxComplete(function() {
-    moveHeaderToFirst(); 
+  $(document).ajaxComplete(function () {
+    moveHeaderToFirst();
   });
 });

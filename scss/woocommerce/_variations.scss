@@ -1,5 +1,3 @@
-
-
 .woocommerce-variation.single_variation {
   display: flex;
   flex-direction: column-reverse;
@@ -43,15 +41,15 @@
   label {
     margin: 0;
   }
-  
+
   select {
     width: 100%;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       min-width: 126px;
     }
 
-    @media(max-width: 449px) {
+    @media (max-width: 449px) {
       min-width: initial;
       max-width: 130px;
     }

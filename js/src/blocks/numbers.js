@@ -1,29 +1,31 @@
 import $ from 'jquery';
 
-$(window).scroll(function() {
-  $('.numbers__wrapper').each(function(index, element) {
+$(window).scroll(function () {
+  $('.numbers__wrapper').each(function (index, element) {
     let $wrapper = $(element);
     let oTop1 = $wrapper.offset().top - window.innerHeight;
 
     if (!$wrapper.data('animated') && $(window).scrollTop() > oTop1) {
-      $wrapper.find('.numbers__digit').each(function() {
+      $wrapper.find('.numbers__digit').each(function () {
         let $this = $(this),
           countTo = $this.attr('data-count');
         $({
-          countNum: $this.text()
-        }).animate({
-            countNum: countTo
+          countNum: $this.text(),
+        }).animate(
+          {
+            countNum: countTo,
           },
           {
             duration: 2000,
             easing: 'swing',
-            step: function() {
+            step: function () {
               $this.text(formatNumber(Math.floor(this.countNum)));
             },
-            complete: function() {
+            complete: function () {
               $this.text(formatNumber(this.countNum));
-            }
-          });
+            },
+          },
+        );
         $this.css('opacity', '1');
       });
       $wrapper.data('animated', true);

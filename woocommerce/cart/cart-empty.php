@@ -15,11 +15,9 @@
  * @version 3.5.0
  */
 
-defined('ABSPATH') || exit;
+defined('ABSPATH') || exit();
 
-if (wc_get_page_id('shop') > 0) :
-
-?>
+if (wc_get_page_id('shop') > 0): ?>
 	<div class="empty-cart">
 		<div class="container-fluid">
 			<div class="empty-cart__content">

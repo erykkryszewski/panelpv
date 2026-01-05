@@ -23,7 +23,7 @@
     border-top-right-radius: $theme-border-radius;
     background: $white;
     position: relative;
-    
+
     // &::before {
     //   display: block;
     //   position: absolute;
@@ -47,7 +47,7 @@
     //   }
     // }
 
-    @media(max-width: 575px) {
+    @media (max-width: 575px) {
       height: 340px;
     }
 
@@ -68,15 +68,16 @@
     //   }
     // }
   }
-  
-  h2, .woocommerce-loop-product__title {
+
+  h2,
+  .woocommerce-loop-product__title {
     padding: 25px 15px 0;
     margin: 0;
     @extend .theme-content-product-title;
     min-height: 69px;
     background: $very-light-gray;
-    
-    @media(max-width: 767px) {
+
+    @media (max-width: 767px) {
       min-height: auto;
     }
   }
@@ -91,7 +92,7 @@
     del {
       @extend .theme-content-product-price-deleted;
     }
-  
+
     ins {
       text-decoration: none;
     }

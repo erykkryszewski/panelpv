@@ -1,19 +1,19 @@
 import $ from 'jquery';
 
-$(document).ready(function() {
+$(document).ready(function () {
   function wrapProductElements() {
-    $('.products > li > a > img').each(function() {
+    $('.products > li > a > img').each(function () {
       $(this).wrap('<div class="product__image"></div>');
     });
-    
-    $('.products > li > a.button.product__button').each(function() {
+
+    $('.products > li > a.button.product__button').each(function () {
       $(this).wrap('<div class="product__button-wrapper"></div>');
     });
   }
 
-  wrapProductElements(); 
+  wrapProductElements();
 
-  $(document).ajaxComplete(function() {
+  $(document).ajaxComplete(function () {
     wrapProductElements();
   });
 });

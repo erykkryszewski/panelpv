@@ -13,60 +13,55 @@ add_action('acf/init', 'ercodingtheme_acf_init');
  * @since  1.0.0
  * @return void
  */
-function ercodingtheme_acf_init() {
+function ercodingtheme_acf_init()
+{
+    add_filter(
+        'block_categories_all',
+        function ($categories, $post) {
+            return array_merge($categories, [
+                [
+                    'slug' => 'ercodingtheme',
+                    'title' => __('ercodingtheme Blocks', 'ercodingtheme'),
+                ],
+            ]);
+        },
+        10,
+        2,
+    );
 
-	add_filter('block_categories_all', function($categories, $post) {
-		return array_merge(
-			$categories,
-			array(
-				array(
-					'slug' => 'ercodingtheme',
-					'title' => __('ercodingtheme Blocks', 'ercodingtheme'),
-				),
-			)
-		);
-	}, 10, 2);
+    // Check if function exists.
+    if (function_exists('acf_register_block')) {
+        $blocks = require get_stylesheet_directory() . '/acf/blocks.php';
 
-	// Check if function exists.
-	if (function_exists('acf_register_block')) {
+        if (is_array($blocks)) {
+            foreach ($blocks as $name => $params) {
+                $params = array_merge($params, [
+                    'name' => $name,
+                    'mode' => 'edit',
+                    'render_callback' => 'ercodingtheme_block_render_callback',
+                ]);
 
-		$blocks = require get_stylesheet_directory() . '/acf/blocks.php';
+                // Register a block.
+                acf_register_block($params);
+            }
+        }
 
-		if (is_array($blocks)) {
-			foreach ($blocks as $name => $params) {
-				$params = array_merge(
-					$params,
-					[
-						'name'            => $name,
-						'mode'            => 'edit',
-						'render_callback' => 'ercodingtheme_block_render_callback',
-					]
-				);
+        function ercodingtheme_block_render_callback($block)
+        {
+            $slug = str_replace('acf/', '', $block['name']);
 
-				// Register a block.
-				acf_register_block($params);
-			}
-		}
+            if (file_exists(get_theme_file_path("/acf/blocks/{$slug}.php"))) {
+                include get_theme_file_path("/acf/blocks/{$slug}.php");
+            }
+        }
+    }
 
-		function ercodingtheme_block_render_callback($block) {
-			$slug = str_replace('acf/', '', $block['name']);
-
-			if(file_exists(get_theme_file_path("/acf/blocks/{$slug}.php"))) {
-				include(get_theme_file_path("/acf/blocks/{$slug}.php"));
-			}
-		}
-
-	}
-
-	if (function_exists('acf_add_options_page')) {
-		acf_add_options_page(
-			[
-				'page_title'  => 'Ustawienia globalne',
-				'parent_slug' => 'themes.php',
-			]
-		);
-	}
-
+    if (function_exists('acf_add_options_page')) {
+        acf_add_options_page([
+            'page_title' => 'Ustawienia globalne',
+            'parent_slug' => 'themes.php',
+        ]);
+    }
 }
 
 /**
@@ -76,15 +71,18 @@ function ercodingtheme_acf_init() {
  * @param  string $block Block data.
  * @return void
  */
-add_filter('render_block', function($block_content, $block) {
+add_filter(
+    'render_block',
+    function ($block_content, $block) {
+        if (preg_match('~^core/|core-embed/~', $block['blockName'])) {
+            $block_content = sprintf('<div class="default-block container">%s</div>', $block_content);
+        }
 
-	if (preg_match('~^core/|core-embed/~', $block['blockName'])) {
-		 $block_content = sprintf('<div class="default-block container">%s</div>', $block_content);
-	}
-
-	return $block_content;
-
-}, PHP_INT_MAX - 1, 2);
+        return $block_content;
+    },
+    PHP_INT_MAX - 1,
+    2,
+);
 
 add_filter('acf/settings/save_json', 'ercodingtheme_acf_json_save_point');
 /**
@@ -94,8 +92,9 @@ add_filter('acf/settings/save_json', 'ercodingtheme_acf_json_save_point');
  * @param  string $path Saving point path.
  * @return string       Saving point path.
  */
-function ercodingtheme_acf_json_save_point($path) {
-	return get_stylesheet_directory() . '/acf/local-json';
+function ercodingtheme_acf_json_save_point($path)
+{
+    return get_stylesheet_directory() . '/acf/local-json';
 }
 
 add_filter('acf/settings/load_json', 'ercodingtheme_acf_json_load_point');
@@ -106,8 +105,9 @@ add_filter('acf/settings/load_json', 'ercodingtheme_acf_json_load_point');
  * @param  array $paths JSON loading points.
  * @return array        JSON loading points.
  */
-function ercodingtheme_acf_json_load_point($paths) {
-	unset($paths[0]);
-	$paths[] = get_stylesheet_directory() . '/acf/local-json';
-	return $paths;
+function ercodingtheme_acf_json_load_point($paths)
+{
+    unset($paths[0]);
+    $paths[] = get_stylesheet_directory() . '/acf/local-json';
+    return $paths;
 }

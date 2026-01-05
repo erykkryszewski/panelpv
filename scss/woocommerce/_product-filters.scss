@@ -9,16 +9,16 @@
   margin: 30px 0 0;
   position: relative;
 
-  @media(max-width: 1270px) {
+  @media (max-width: 1270px) {
     margin: 30px 0;
     max-width: calc(100% - 40px);
   }
-  
+
   form {
     position: absolute;
     top: 0;
-    
-    @media(max-width: 1270px) {
+
+    @media (max-width: 1270px) {
       position: static;
     }
 
@@ -29,15 +29,15 @@
       flex-direction: column;
       gap: 20px;
 
-      @media(max-width: 1270px) {
+      @media (max-width: 1270px) {
         flex-direction: row;
       }
 
-      @media(max-width: 767px) {
+      @media (max-width: 767px) {
         flex-wrap: wrap;
       }
 
-      @media(max-width: 565px) {
+      @media (max-width: 565px) {
         flex-direction: column;
         gap: 30px;
       }
@@ -51,11 +51,11 @@
           padding: 0;
           margin: 0 0 10px;
 
-          @media(max-width: 1270px) {
+          @media (max-width: 1270px) {
             margin: -5px 0 0;
           }
 
-          @media(max-width: 565px) {
+          @media (max-width: 565px) {
             margin: 5px 0 0;
           }
         }
@@ -69,7 +69,8 @@
           font-weight: 500;
         }
 
-        input, select {
+        input,
+        select {
           background: transparent !important;
           border-radius: $theme-border-radius !important;
         }
@@ -86,7 +87,7 @@
 
         // search li
         &.sf-field-search {
-          @media(max-width: 767px) {
+          @media (max-width: 767px) {
             order: 1;
             width: calc(50% - 10px);
           }
@@ -94,7 +95,7 @@
 
         // cat li
         &.sf-field-taxonomy-product_cat {
-          @media(max-width: 767px) {
+          @media (max-width: 767px) {
             order: 3;
             width: 100%;
           }
@@ -102,7 +103,7 @@
 
         // price
         &.sf-field-post-meta-_price {
-          @media(max-width: 767px) {
+          @media (max-width: 767px) {
             order: 2;
             width: calc(50% - 10px);
           }
@@ -111,8 +112,8 @@
         ul {
           display: flex;
           flex-direction: column;
-          
-          @media(max-width: 1270px) {
+
+          @media (max-width: 1270px) {
             margin: -8px 0 0;
           }
         }

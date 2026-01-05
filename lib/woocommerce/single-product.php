@@ -9,6 +9,6 @@ add_action('woocommerce_single_product_summary', 'woocommerce_template_single_pr
 
 // change gallery image size
 
-add_filter( 'woocommerce_gallery_thumbnail_size', function() {
-  return 'medium';
-} );
+add_filter('woocommerce_gallery_thumbnail_size', function () {
+    return 'medium';
+});

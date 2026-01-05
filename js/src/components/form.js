@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const ercodingForm = document.querySelector('.ercoding-form');
   if (!ercodingForm) return;
   const ercodingFormName = document.querySelector('.ercoding-form-name');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return true;
     }
   }
-  
+
   function ercodingValidateSurname() {
     const input = ercodingFormSurname.querySelector('input');
     input.value = input.value.replace(/[^A-Za-z\s]/g, '');
@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
       return true;
     }
   }
-   
 
   function ercodingValidateEmail() {
     if (!ercodingFormEmail) return true;
@@ -75,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!ercodingFormPhone) return true;
     const input = ercodingFormPhone.querySelector('input');
     const value = input ? input.value.trim() : '';
-    if (!/^[+0-9\s]+$/.test(value) || (value.replace(/\D/g, '').length < 9)) {
+    if (!/^[+0-9\s]+$/.test(value) || value.replace(/\D/g, '').length < 9) {
       ercodingShowError(ercodingFormPhone, 'Wprowadź prawidłowy numer telefonu.');
       return false;
     } else {
@@ -120,38 +119,39 @@ document.addEventListener('DOMContentLoaded', function() {
     return valid;
   }
 
-  if (ercodingFormName) { 
-    ercodingFormName.querySelector('input').addEventListener('input', ercodingValidateName); 
-  
+  if (ercodingFormName) {
+    ercodingFormName.querySelector('input').addEventListener('input', ercodingValidateName);
   }
 
-  if (ercodingFormSurname) { 
-    ercodingFormSurname.querySelector('input').addEventListener('input', ercodingValidateSurname); 
+  if (ercodingFormSurname) {
+    ercodingFormSurname.querySelector('input').addEventListener('input', ercodingValidateSurname);
   }
 
-  if (ercodingFormEmail) { 
-    ercodingFormEmail.querySelector('input').addEventListener('input', ercodingValidateEmail); 
+  if (ercodingFormEmail) {
+    ercodingFormEmail.querySelector('input').addEventListener('input', ercodingValidateEmail);
   }
 
-  if (ercodingFormPhone) { 
-    ercodingFormPhone.querySelector('input').addEventListener('input', ercodingValidatePhone); 
+  if (ercodingFormPhone) {
+    ercodingFormPhone.querySelector('input').addEventListener('input', ercodingValidatePhone);
   }
 
-  if (ercodingFormTextarea) { 
-    ercodingFormTextarea.querySelector('textarea').addEventListener('input', ercodingValidateTextarea); 
+  if (ercodingFormTextarea) {
+    ercodingFormTextarea.querySelector('textarea').addEventListener('input', ercodingValidateTextarea);
   }
 
-  if (ercodingFormAcceptance) { 
-    ercodingFormAcceptance.querySelector('input[type="checkbox"]').addEventListener('change', ercodingValidateAcceptance); 
+  if (ercodingFormAcceptance) {
+    ercodingFormAcceptance
+      .querySelector('input[type="checkbox"]')
+      .addEventListener('change', ercodingValidateAcceptance);
   }
 
   if (ercodingFormSubmit) {
-    ercodingFormSubmit.addEventListener('mouseenter', function() {
+    ercodingFormSubmit.addEventListener('mouseenter', function () {
       ercodingValidateAllFields();
     });
   }
 
-  ercodingForm.addEventListener('submit', function() {
+  ercodingForm.addEventListener('submit', function () {
     ercodingValidateAllFields();
   });
 });

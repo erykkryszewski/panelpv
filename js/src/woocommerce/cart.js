@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(document).ready(function() {
+$(document).ready(function () {
   if ($('body').hasClass('woocommerce-cart')) {
     const shopHeroHTML = `
       <div class="shop-hero">
@@ -20,7 +20,7 @@ $(document).ready(function() {
         updateCartButton.click();
 
         // Wait for the update to complete (using WooCommerce hooks)
-        $(document).ajaxStop(function() {
+        $(document).ajaxStop(function () {
           window.location.href = targetUrl;
         });
       } else {
@@ -30,14 +30,14 @@ $(document).ready(function() {
     }
 
     // Handle "Continue Shopping" button
-    $('a.button--continue-shopping').on('click', function(event) {
+    $('a.button--continue-shopping').on('click', function (event) {
       event.preventDefault();
       const targetUrl = $(this).attr('href');
       updateCartAndRedirect(targetUrl);
     });
 
     // Handle "Checkout" button
-    $('a.button--checkout').on('click', function(event) {
+    $('a.button--checkout').on('click', function (event) {
       event.preventDefault();
       const targetUrl = $(this).attr('href');
       updateCartAndRedirect(targetUrl);

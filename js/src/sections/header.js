@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(window).scroll(function(){
+$(window).scroll(function () {
   if ($(window).scrollTop() >= 50) {
     $('.header').addClass('header--fixed');
     $('.nav').addClass('nav--fixed');
@@ -9,8 +9,7 @@ $(window).scroll(function(){
     $('.nav .sub-menu').addClass('sub-menu--fixed');
     $('.nav__button').addClass('nav__button--fixed');
     $('.nav__hamburger').addClass('nav__hamburger--fixed');
-  }
-  else {
+  } else {
     $('.header').removeClass('header--fixed');
     $('.nav').removeClass('nav--fixed');
     $('.nav__logo').removeClass('nav__logo--fixed');

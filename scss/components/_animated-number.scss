@@ -5,7 +5,7 @@
   &__circle {
     transform: rotate(-90deg);
     transform-origin: center;
-    stroke-dasharray: 0 100; 
+    stroke-dasharray: 0 100;
 
     &--animated {
       animation: animated-number-fill 2s ease-out forwards;
@@ -15,9 +15,9 @@
 
 @keyframes animated-number-fill {
   from {
-    stroke-dasharray: 0 100; 
+    stroke-dasharray: 0 100;
   }
   to {
-    stroke-dasharray: var(--dasharray) 100; 
+    stroke-dasharray: var(--dasharray) 100;
   }
 }

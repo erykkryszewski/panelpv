@@ -9,7 +9,11 @@
   &__wrapper {
     width: 100%;
 
-    h1, h2, h3, h4, h5 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       padding-bottom: 25px;
       margin: 0;
 
@@ -24,9 +28,10 @@
       }
     }
 
-    ul, ol {
+    ul,
+    ol {
       margin: 20px 0 0;
-      
+
       li {
         @extend .paragraph;
         margin: 0;

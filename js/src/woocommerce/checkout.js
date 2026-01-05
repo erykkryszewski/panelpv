@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(document).ready(function(){
+$(document).ready(function () {
   if ($('body').hasClass('woocommerce-checkout')) {
     const shopHeroHTML = `
       <div class="shop-hero">

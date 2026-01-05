@@ -2,7 +2,7 @@
   padding: 60px 0 0;
   overflow: hidden;
 
-  @media(max-width: 991px) {
+  @media (max-width: 991px) {
     padding: 80px 0 0;
     text-align: center;
   }
@@ -13,11 +13,11 @@
     margin: 0 0 35px;
     border-radius: $theme-border-radius;
 
-    @media(max-width: 991px) {
+    @media (max-width: 991px) {
       height: 400px;
     }
 
-    @media(max-width: 499px) {
+    @media (max-width: 499px) {
       height: 250px;
     }
 
@@ -28,7 +28,8 @@
   }
 
   &__content {
-    > .default-block.container, .container {
+    > .default-block.container,
+    .container {
       margin: 25px 0 0;
     }
 
@@ -36,13 +37,15 @@
       margin: 0;
     }
 
-    ul, ol {
+    ul,
+    ol {
       margin: 20px 0 0;
 
-      .default-block.container, .container {
+      .default-block.container,
+      .container {
         margin: 0;
       }
-      
+
       li {
         @extend .paragraph;
         margin: 0;

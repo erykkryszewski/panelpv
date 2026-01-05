@@ -23,7 +23,7 @@
     padding: 30px 20px 25px;
     gap: 30px;
 
-    @media(max-width: 991px) {
+    @media (max-width: 991px) {
       width: 100%;
     }
   }
@@ -52,7 +52,7 @@
     display: block;
     text-align: left;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       font-size: 14px;
     }
   }
@@ -60,8 +60,8 @@
   &__answer {
     p {
       text-align: left;
-      
-      @media(max-width: 767px) {
+
+      @media (max-width: 767px) {
         font-size: 14px;
       }
     }

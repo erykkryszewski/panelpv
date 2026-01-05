@@ -23,10 +23,10 @@ body {
 }
 
 select,
-input[type="text"],
-input[type="password"],
-input[type="number"],
-input[type="submit"],
+input[type='text'],
+input[type='password'],
+input[type='number'],
+input[type='submit'],
 textarea {
   offset: none;
   outline: none;
@@ -47,7 +47,7 @@ button {
 
 a,
 button,
-input[type="submit"] {
+input[type='submit'] {
   cursor: pointer !important;
   font-family: $font-primary;
 }
@@ -63,7 +63,8 @@ a {
   }
 }
 
-img, svg {
+img,
+svg {
   display: block;
   width: auto;
   height: auto;
@@ -83,11 +84,13 @@ img, svg {
   }
 }
 
-.default-block.container, .default-block.container-fluid {
+.default-block.container,
+.default-block.container-fluid {
   margin: 0 auto;
 
-  ol, ul {
-    @media(min-width: 1200px) {
+  ol,
+  ul {
+    @media (min-width: 1200px) {
       padding: 0 0 0 18px;
     }
   }
@@ -99,7 +102,8 @@ img, svg {
   }
 }
 
-body.page .display-none, body.woocommerce-page .display-none {
+body.page .display-none,
+body.woocommerce-page .display-none {
   display: none;
 }
 
@@ -162,7 +166,8 @@ body.page .display-none, body.woocommerce-page .display-none {
           background: none !important;
           border: none !important;
 
-          input, textarea {
+          input,
+          textarea {
             border: 2px solid $error-color !important;
           }
         }
@@ -177,7 +182,7 @@ body.page .display-none, body.woocommerce-page .display-none {
   .gform_validation_errors {
     padding: 16px !important;
     text-align: center;
-  
+
     .gform-icon {
       display: none !important;
     }
@@ -211,17 +216,17 @@ body.page .display-none, body.woocommerce-page .display-none {
 }
 
 #wpadminbar {
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     display: none !important;
   }
 }
 
-ul > li, ol > li {
+ul > li,
+ol > li {
   list-style: none;
 }
 
 .container-fluid {
-
   &--max-width {
     max-width: 2200px;
   }
@@ -229,9 +234,8 @@ ul > li, ol > li {
   &--padding {
     padding: 0 30px;
 
-    @media(max-width: 991px) {
+    @media (max-width: 991px) {
       padding: 0 15px;
     }
   }
 }
-

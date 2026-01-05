@@ -20,9 +20,10 @@
   display: none !important;
 }
 
-.woocommerce-shop, .tax-product_cat {
+.woocommerce-shop,
+.tax-product_cat {
   #main {
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       max-width: calc(100% - 30px);
     }
   }

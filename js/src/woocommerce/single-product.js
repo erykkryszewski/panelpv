@@ -1,11 +1,11 @@
 import $ from 'jquery';
 
-$(document).ready(function(){
+$(document).ready(function () {
   $('.woocommerce-product-gallery, .summary').wrapAll('<div class="single-product-content"></div>');
 });
 
-$(document).ready(function(){
-  if($('.single-product-content .flex-control-nav')) {
+$(document).ready(function () {
+  if ($('.single-product-content .flex-control-nav')) {
     $('.single-product-content .flex-control-nav').slick({
       dots: true,
       arrows: false,
@@ -20,14 +20,14 @@ $(document).ready(function(){
         {
           breakpoint: 700,
           settings: {
-            slidesToShow: 5
-          }
-        }
-      ]
+            slidesToShow: 5,
+          },
+        },
+      ],
     });
-  
-    $(".slick-prev").text("");
-    $(".slick-next").text("");
-    $("ul.slick-dots > li > button").text("");
+
+    $('.slick-prev').text('');
+    $('.slick-next').text('');
+    $('ul.slick-dots > li > button').text('');
   }
 });

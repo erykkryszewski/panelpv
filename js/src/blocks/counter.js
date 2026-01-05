@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(document).ready(function() {
+$(document).ready(function () {
   const $counter = $('.counter');
   if ($counter.length) {
     const count_down = new Date($counter.find('.counter__time-wrapper').attr('id')).getTime();
@@ -8,15 +8,15 @@ $(document).ready(function() {
       day: $counter.find('.counter__day'),
       hour: $counter.find('.counter__hour'),
       minute: $counter.find('.counter__minute'),
-      second: $counter.find('.counter__second')
-    }
-    const interval = setInterval(function() {
+      second: $counter.find('.counter__second'),
+    };
+    const interval = setInterval(function () {
       const now = new Date().getTime();
       const distance = count_down - now;
       if (distance < 0) {
-        Object.values(elements).forEach(el => el.text('0'));
+        Object.values(elements).forEach((el) => el.text('0'));
         // Fade out the whole counter section when countdown is done
-        $counter.fadeOut('slow', function() {
+        $counter.fadeOut('slow', function () {
           // Optionally, remove the counter from the DOM after fading out
           // $(this).remove();
         });
@@ -36,12 +36,12 @@ $(document).ready(function() {
 
       // Check if the countdown has reached zero across all units
       if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
-        $counter.fadeOut('slow', function() {
+        $counter.fadeOut('slow', function () {
           // Optionally, remove the counter from the DOM after fading out
           // $(this).remove();
         });
         clearInterval(interval); // Ensure we stop the interval
       }
-    }, 1000); 
+    }, 1000);
   }
 });

@@ -13,13 +13,13 @@
     justify-content: center;
     gap: 15px;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       flex-direction: column;
     }
   }
 
   &__button {
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       min-width: 203px;
       text-align: center;
     }

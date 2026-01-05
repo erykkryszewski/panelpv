@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   max-width: initial;
-      
-  @media(max-width: 767px) {
+
+  @media (max-width: 767px) {
     flex-direction: row;
     justify-content: center;
   }
@@ -11,8 +11,8 @@
   li {
     padding: 0 5px;
     list-style: none;
-              
-    @media(max-width: 767px) {
+
+    @media (max-width: 767px) {
       margin: 5px;
     }
 
