@@ -4,6 +4,45 @@ add_action('after_setup_theme', function () {
     add_role('czlonek_wspierajacy', 'Członek wspierający', ['read' => true]);
 });
 
+function panelpv_get_member_content_rules()
+{
+    return [
+        [
+            'post_type' => 'czlonkostwo-zwycz',
+            'url_parts' => ['czlonkostwo-zwycz'],
+            'allowed_roles' => ['czlonek_zwyczajny', 'czlonek_wspierajacy'],
+        ],
+        [
+            'post_type' => 'czlonkostwo-wspier',
+            'url_parts' => ['czlonkostwo-wspier'],
+            'allowed_roles' => ['czlonek_wspierajacy'],
+        ],
+        [
+            'post_type' => 'materialy-zwycz',
+            'url_parts' => ['materialy-zwycz'],
+            'allowed_roles' => ['czlonek_zwyczajny', 'czlonek_wspierajacy'],
+        ],
+        [
+            'post_type' => 'materialy-wspier',
+            'url_parts' => ['materialy-wspier'],
+            'allowed_roles' => ['czlonek_wspierajacy'],
+        ],
+    ];
+}
+
+function panelpv_get_member_content_rule_for_request($requestUri)
+{
+    foreach (panelpv_get_member_content_rules() as $rule) {
+        foreach ($rule['url_parts'] as $urlPart) {
+            if (strpos($requestUri, $urlPart) !== false) {
+                return $rule;
+            }
+        }
+    }
+
+    return null;
+}
+
 function panelpv_admin_go_home_handler()
 {
     wp_safe_redirect(home_url('/'));
@@ -61,6 +100,8 @@ add_action(
         remove_menu_page('edit.php?post_type=page');
         remove_menu_page('edit.php?post_type=czlonkostwo-wspier');
         remove_menu_page('edit.php?post_type=czlonkostwo-zwycz');
+        remove_menu_page('edit.php?post_type=materialy-wspier');
+        remove_menu_page('edit.php?post_type=materialy-zwycz');
         remove_submenu_page('users.php', 'user-new.php');
         remove_submenu_page('users.php', 'users.php');
     },
@@ -185,10 +226,9 @@ add_action('template_redirect', function () {
         return;
     }
 
-    $panelpvIsWspierUrl = strpos($panelpvRequestUri, 'czlonkostwo-wspier') !== false;
-    $panelpvIsZwyczUrl = strpos($panelpvRequestUri, 'czlonkostwo-zwycz') !== false;
+    $panelpvContentRule = panelpv_get_member_content_rule_for_request($panelpvRequestUri);
 
-    if (!$panelpvIsWspierUrl && !$panelpvIsZwyczUrl) {
+    if (empty($panelpvContentRule)) {
         return;
     }
 
@@ -208,13 +248,18 @@ add_action('template_redirect', function () {
         return;
     }
 
-    if ($panelpvIsWspierUrl && !in_array('czlonek_wspierajacy', $panelpvRoles, true)) {
+    if (empty(array_intersect($panelpvContentRule['allowed_roles'], $panelpvRoles))) {
         wp_safe_redirect($panelpvRedirectUrl);
         exit();
     }
+});
 
-    if ($panelpvIsZwyczUrl && !in_array('czlonek_zwyczajny', $panelpvRoles, true)) {
-        wp_safe_redirect($panelpvRedirectUrl);
-        exit();
+add_action('pre_get_posts', function ($query) {
+    if (is_admin() || !$query->is_main_query()) {
+        return;
+    }
+
+    if ($query->is_post_type_archive('czlonkostwo-wspier')) {
+        $query->set('post_type', ['czlonkostwo-wspier', 'czlonkostwo-zwycz']);
     }
 });
